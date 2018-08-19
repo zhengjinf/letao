@@ -126,3 +126,16 @@ a:active {
   line-height: 50px;
   text-align: center;
 }
+.lt-content {
+  height: 1000px;
+}
+.lt-content .echarts-1,
+.lt-content .echarts-2 {
+  width: 48%;
+  height: 400px;
+}
+.table.table-bordered th,
+.table.table-bordered td {
+  vertical-align: middle;
+  text-align: center;
+}
