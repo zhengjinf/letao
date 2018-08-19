@@ -122,3 +122,8 @@ ul {
   width: 48%;
   height: 400px;
 }
+.lt-content table.table-bordered th,
+.lt-content table.table-bordered td {
+  vertical-align: middle;
+  text-align: center;
+}
