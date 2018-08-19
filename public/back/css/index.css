@@ -117,3 +117,8 @@ ul {
 .lt-main .toptitle.hidemenu {
   padding-left: 0;
 }
+#main,
+#main2 {
+  width: 48%;
+  height: 400px;
+}
