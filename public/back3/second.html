@@ -133,8 +133,28 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <input type="text"  name="categoryName" class="form-control" placeholder="请输入一级分类">
+                  <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="selectFirst">请选择一级分类</span>
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <!-- <li><a href="#">Action</a></li> -->
+                      </ul>
+                    </div>
               </div>
+              <div class="form-group mt-20" >
+                <input type="text"  name="categoryName" class="form-control" placeholder="请输入二级分类">
+              </div>
+              <div class="form-group">
+                <label for="updatefile" class="btn btn-default">上传图片</label>
+                <input type="file" id ="updatefile" name="pic1" data-url="/category/addSecondCategoryPic">
+              </div>
+              <div class="form-group img-box">
+                <img src="./images/none.png" style="width:100px;" alt="">
+              </div>
+
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -150,10 +170,16 @@
     {{each rows v i}}
     <tr>
         <td>{{i+ 1 + (page - 1)*size}}</td>
-        <td>wwww</td>
-        <td>www</td>
+        <td>{{v.categoryName}}</td>
+        <td>{{v.brandName}}</td>
         <td><img src="{{v.brandLogo}}" alt="" style="height:50px;"></td>
       </tr>
+      {{/each}}
+    </script>
+
+    <script type="text/html" id ="secTpl">
+      {{each rows v i}}
+      <li><a href="#">{{v.categoryName}}</a></li>
       {{/each}}
     </script>
 
@@ -164,6 +190,8 @@
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="js/common.js"></script>
     <script src="js/second.js"></script>
 </body>
