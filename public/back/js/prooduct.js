@@ -101,7 +101,7 @@ $(function () {
   $("#fileupdate").fileupload({
     dataType: 'json',
     done: function (e, data) {
-      console.log(data.result);
+      // console.log(data.result);
       //将文件地址存到数组中width="100"
       $('.imgbox').prepend(' <img src="'+ data.result.picAddr+'" width="100px">');
       picArr.unshift(data.result);
