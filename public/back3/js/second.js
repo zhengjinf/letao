@@ -13,7 +13,7 @@
         },
         dataType: "json",
         success: function( info ) {
-          console.log( info );
+          // console.log( info );
           var htmlStr = template('tpl',info);
           $('.lt-content tbody').html(htmlStr);
           // 初始化分页
@@ -55,7 +55,7 @@
       var txt = $(this).text();
       $('.selectFirst').text(txt);
       var id = $(this).data('id');
-      console.log(id)
+      // console.log(id)
       $('[name="categoryId"]').val(id );
       //重置表单状态
       $('#form').data('bootstrapValidator').updateStatus('categoryId','VALID');
@@ -93,7 +93,7 @@
             }
           }
         },
-        categoryName:{
+        brandName:{
           validators:{
             notEmpty:{
               message:'请输入二级分类'
@@ -119,7 +119,7 @@
         data:$('#form').serialize(),
         //后台返回数据类型为json,可以不用设置dataType
         success:function(info){
-          console.log(info);
+          // console.log(info);
           if(info.success){
             //关闭模态框
             $('#cateSecModal').modal('hide');
@@ -127,11 +127,11 @@
             currentpage = 1;
             render();
             //重置表单状态
-          //   $('#form').data('bootstrapValidator').resetForm(true);
-          //  //重置下拉框
-          //  $('.dropD').text('请选择一级分类');
-          // //图片
-          //  $('.imgbox img').attr('src','images/none.png');
+            $('#form').data('bootstrapValidator').resetForm(true);
+          //重置下拉框
+           $('.selectFirst').text('请选择一级分类');
+          //图片
+           $('.img-box img').attr('src','images/none.png');
           }
 
         }

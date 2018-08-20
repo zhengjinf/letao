@@ -137,6 +137,7 @@
                 </div>
                 <!-- 存储品牌brandId -->
                 <input type="hidden" name="brandId">
+                <input type="hidden" name="statu">
                
               </div>
              
@@ -165,13 +166,14 @@
                 <label for="fileupdate" class="btn btn-default">上传图片</label>
                 <!-- 上传文件的插件 fileupload 指定name:后台接收的图片和data-url:接收地址属性 -->
                 <!-- name指定图片上传时的name属性 -->
-                <input id="fileupdate" type="file" name="pic1" data-url="/category/addSecondCategoryPic" style="display: none;" multiple>
+                <input id="fileupdate" type="file" name="pic1" data-url="/product/addProductPic" style="display: none;" multiple>
               </div>
   
               <div class="form-group imgbox">
-                <img src="./images/none.png" style="width:100px;" alt="">
-                <img src="./images/none.png" style="width:100px;" alt="">
-                <img src="./images/none.png" style="width:100px;" alt="">
+                <input type="hidden" name="picStatus">
+                <!-- <img src="./images/none.png" width:"100px"> -->
+                <!-- <img src="./images/none.png" style="width:100px;" alt="">
+                <img src="./images/none.png" style="width:100px;" alt=""> -->
                 
               </div>
   

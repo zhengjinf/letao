@@ -69,7 +69,7 @@ $('#form').on('success.form.bv',function(e){
     data:$("#form").serialize(),
     dataType:'json',
     success:function(info){
-      console.log(info);
+      // console.log(info);
       if(info.success){
         //关闭模态框
         $('#cateModal').modal('hide');

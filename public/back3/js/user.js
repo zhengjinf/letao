@@ -59,7 +59,7 @@ $(function(){
       },
       dataType:'json',
       success:function(info){
-        console.log(info);
+        // console.log(info);
         if(info.success){
           //关闭模态框
           $('#forbidModal').modal('hide');

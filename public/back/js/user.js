@@ -16,7 +16,7 @@ $(function () {
       },
       dataType: 'json',
       success: function (info) {
-        console.log(info);
+        // console.log(info);
         var htmlStr = template('tpl', info);
         $('.lt-content tbody').html(htmlStr);
         //初始化分页
