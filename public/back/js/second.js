@@ -64,7 +64,9 @@ $(function () {
     // 将文本内容赋值给给隐藏域
     $id = $(this).data('id');
     // console.log($id)
-    $('[name="categoryId"]').val($id );
+    $('[name="categoryId"]').val($id ); 
+    //更新校验状态
+    $('#form').data('bootstrapValidator').updateStatus('categoryId','VALID');
   })
 
   //4.上传文件利用插件实现文件上传初始化
@@ -81,16 +83,16 @@ $(function () {
       $('.imgbox img').attr('src', imgUrl);
       //将地址传到隐藏域中
       $('[name="brandLogo"]').val( imgUrl );
-
-      
-      
-
+       //更新校验状态
+    $('#form').data('bootstrapValidator').updateStatus('brandLogo','VALID');
     }
   })
 
   //5.配置表单
   $('#form').bootstrapValidator({
       //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置
+      //默认插件不对隐藏域进行校验
+      //重置排除项
      excluded: [],
     //设置小图标
     feedbackIcons: {
@@ -103,7 +105,7 @@ $(function () {
       categoryId: {
         validators: {
           notEmpty: {
-            message: "请输入一级分类名称"
+            message: "请选择一级分类"
           }
         }
       },
@@ -142,8 +144,8 @@ $(function () {
           currentpage = 1;
           //重新渲染第一页
           render();
-          // 重置校验状态
-          // $('#form').data("bootstrapValidator").updateStatus("brandLogo", "VALID")
+          // 重置表单
+          $('#form').data('bootstrapValidator').resetForm(true);
           //重置下拉框
           $('.dropD').text('请选择一级分类');
           //图片

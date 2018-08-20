@@ -142,16 +142,21 @@
                         <!-- <li><a href="#">Action</a></li> -->
                       </ul>
                     </div>
+                    <!-- 存储categoryId -->
+                    <input type="hidden" name="categoryId">
+                    <!-- 火热的品牌 -->
+                    <input type="hidden" name="hot" value="1">
               </div>
               <div class="form-group mt-20" >
                 <input type="text"  name="categoryName" class="form-control" placeholder="请输入二级分类">
               </div>
               <div class="form-group">
                 <label for="updatefile" class="btn btn-default">上传图片</label>
-                <input type="file" id ="updatefile" name="pic1" data-url="/category/addSecondCategoryPic">
+                <input type="file" id ="updatefile" name="pic1" data-url="/category/addSecondCategoryPic" style="display:none;">
               </div>
               <div class="form-group img-box">
                 <img src="./images/none.png" style="width:100px;" alt="">
+                <input type="hidden" name="brandLogo">
               </div>
 
 
@@ -179,7 +184,7 @@
 
     <script type="text/html" id ="secTpl">
       {{each rows v i}}
-      <li><a href="#">{{v.categoryName}}</a></li>
+      <li><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
       {{/each}}
     </script>
 

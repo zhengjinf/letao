@@ -54,6 +54,42 @@
             <li><a href="index.html">管理系统</a></li>
             <li class="active">商品管理</li>
           </ol>
+          <div class="lt-content">
+
+              <button class="btn btn-default" id="addBtn">添加商品</button>
+        
+              <table class="table table-bordered table-hover mt-20">
+                  <thead>
+                    <tr>
+                      <th>序号</th>
+                      <th>商品名称</th>
+                      <th>商品描述</th>
+                      <th>商品库存</th>
+                      <th>商品尺寸</th>
+                      <th>商品状态</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</td>
+                      <td>描述</td>
+                      <td>20</td>
+                      <td>35-45</td>
+                      <td>已上架</td>
+                      <td><button class="btn btn-danger">下架</button></td>
+                    </tr>
+                  </tbody>
+                
+              </table>
+        
+              <!-- 分页结构 -->
+              <div class="text-right">
+                <ul id="paginator"></ul>
+              </div>
+        
+            </div>
     </div>
   </div>
 
@@ -76,12 +112,28 @@
       </div>
     </div>
 
+    <script type="text/html" id ="productTpl">
+      {{each rows v i}}
+      <tr>
+          <td>{{i + 1 + (page-1)*size}}</td>
+          <td>{{v.proName}}</td>
+          <td>{{v.proDesc}}</td>
+          <td>{{v.num}}</td>
+          <td>{{v.size}}</td>
+          <td>已上架</td>
+          <td><button class="btn btn-danger">下架</button></td>
+        </tr>
+        {{/each}}
+    </script>
 
-  <script src="./lib/jquery/jquery.min.js"></script>
-  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-  <script src="./lib/nprogress/nprogress.js"></script>
-  <script src="./js/commom.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="./js/commom.js"></script>
+    <script src="js/prooduct.js"></script>
 </body>
 </html>

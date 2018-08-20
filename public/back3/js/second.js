@@ -13,7 +13,7 @@
         },
         dataType: "json",
         success: function( info ) {
-          // console.log( info );
+          console.log( info );
           var htmlStr = template('tpl',info);
           $('.lt-content tbody').html(htmlStr);
           // 初始化分页
@@ -53,7 +53,10 @@
     //3.给下拉框绑定点击事件
     $('.dropdown-menu').on('click','a',function(){
       var txt = $(this).text();
-      $('.selectFirst').text(txt)
+      $('.selectFirst').text(txt);
+      var id = $(this).data('id');
+      console.log(id)
+      $('[name="categoryId"]').val(id );
     })
 
     //4.利用插件,实现文件上传
@@ -63,6 +66,8 @@
         // console.log(data.result);
         var imgUrl = data.result.picAddr;
         $('.img-box img').attr('src',imgUrl);
+        //将图片赋值到隐藏域
+        $('[name="brandLogo"]').val(imgUrl);
       }
     })
 
