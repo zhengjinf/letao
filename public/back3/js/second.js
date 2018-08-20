@@ -57,6 +57,8 @@
       var id = $(this).data('id');
       console.log(id)
       $('[name="categoryId"]').val(id );
+      //重置表单状态
+      $('#form').data('bootstrapValidator').updateStatus('categoryId','VALID');
     })
 
     //4.利用插件,实现文件上传
@@ -68,7 +70,73 @@
         $('.img-box img').attr('src',imgUrl);
         //将图片赋值到隐藏域
         $('[name="brandLogo"]').val(imgUrl);
+          //重置表单状态
+      $('#form').data('bootstrapValidator').updateStatus('brandLogo','VALID');
       }
+    })
+    //5.配置表单
+    $('#form').bootstrapValidator({
+      //配置隐藏域
+      excluded: [],
+      //设置小图标
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',//校验成功
+        invalid: 'glyphicon glyphicon-remove',//校验失败
+        validating: 'glyphicon glyphicon-refresh'//校验中
+      },
+      //设置字段
+      fields:{
+        categoryId:{
+          validators:{
+            notEmpty:{
+              message:'请选择一级分类'
+            }
+          }
+        },
+        categoryName:{
+          validators:{
+            notEmpty:{
+              message:'请输入二级分类'
+            }
+          }
+        },
+        brandLogo:{
+          validators:{
+            notEmpty:{
+              message:'请上传图片'
+            }
+          }
+        },
+      }
+    })
+    //表单验证完成,阻止表单默认的提交行为
+    $('#form').on('success.form.bv',function(e){
+      e.preventDefault();
+      // 发送请求
+      $.ajax({
+        type:'post',
+        url:'/category/addSecondCategory',
+        data:$('#form').serialize(),
+        //后台返回数据类型为json,可以不用设置dataType
+        success:function(info){
+          console.log(info);
+          if(info.success){
+            //关闭模态框
+            $('#cateSecModal').modal('hide');
+            //重新渲染第一页
+            currentpage = 1;
+            render();
+            //重置表单状态
+          //   $('#form').data('bootstrapValidator').resetForm(true);
+          //  //重置下拉框
+          //  $('.dropD').text('请选择一级分类');
+          // //图片
+          //  $('.imgbox img').attr('src','images/none.png');
+          }
+
+        }
+      })
+
     })
 
 
