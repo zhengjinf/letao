@@ -1,0 +1,48 @@
+/* 左边 */
+.lt-left{
+float: left;  
+width: 90px;
+height: 100%;
+background-color: #fff;
+position: relative;
+}
+.lt-left ul li a{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  color: #666;
+  background-color: #E3E4E5;
+}
+.lt-left ul li a.current{
+  background-color: #fff;
+  border-right: none;
+}
+
+
+/* 右边 */
+.lt-right {
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+}
+.lt-right ul li{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+
+}
+.lt-right ul li img{
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+
+}
+/* 提示信息 */
+.tips {
+  padding: 10px;
+}

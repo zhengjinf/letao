@@ -1,0 +1,36 @@
+/* 导航 */
+.lt-nav{
+  padding:10px;
+
+}
+.lt-nav ul li{
+  width: 33.33%;
+  float: left;
+}
+/* 产品 */
+.lt-product{
+  padding: 10px;
+}
+.lt-product ul li{
+  padding: 10px;
+  width: 48%;
+  border: 1px solid #ccc;
+  text-align: center;
+  float: left;
+  margin-bottom: 10px;
+}
+.lt-product ul li:nth-child(odd){
+  margin-right: 4%;
+}
+.lt-product ul li img{
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+.lt-product ul li .price{
+  color:red;
+  margin-right: 5px;
+}
+.lt-product ul li .oldprice{
+  text-decoration: line-through;
+}

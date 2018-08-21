@@ -42,3 +42,7 @@
   height: 50px;
   margin: 0 auto;
 }
+/* 提示信息 */
+.tips{
+  padding: 10px;
+}
