@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img{
+  width: 100%;
+  display: block;
+}
+
+/*全屏容器*/
+html,body{
+  width: 100%;
+  height: 100%;
+}
+.lt-container{
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  overflow: hidden;
+}
+/*头部*/
+.lt-header{
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  left:0;
+  top:0;
+  background-color: #006699;
+  padding-left: 45px;
+  padding-right: 45px;
+
+}
+.lt-header .icon-left,
+.lt-header .icon-right{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top:0;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+}
+.lt-header .icon-left{
+  left:0;
+}
+.lt-header .icon-right{
+  right:0;
+}
+.lt-header h3{
+  text-align: center;
+  height: 45px;
+  line-height:45px;
+  color:#fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+
+
+  /*主体*/
+.lt-main{
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+
+/*底部*/
+.lt-footer{
+  position: absolute;
+  height: 55px;
+  width: 100%;
+  bottom:0;
+  left :0;
+  background-color: #006699;
+}
+.lt-footer ul li{
+  width: 25%;
+  height: 55px;
+  text-align: center;
+  float: left;
+}
+.lt-footer ul li a{
+  color:#fff;
+  height: 55px;
+  padding-top: 8px;
+  display: block;
+}
+.lt-footer ul li a.current{
+  color: orange;
+}
+
+.lt-footer ul li a.current p{
+  color: orange;
+}
+.lt-footer ul li a p{
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
