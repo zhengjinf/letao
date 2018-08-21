@@ -101,11 +101,11 @@ $(function () {
   $("#fileupdate").fileupload({
     dataType: 'json',
     done: function (e, data) {
-      // console.log(data.result);
+      console.log(data.result);
       //将文件地址存到数组中width="100"
       $('.imgbox').prepend(' <img src="'+ data.result.picAddr+'" width="100px">');
       picArr.unshift(data.result);
-      // console.log(picArr);
+      console.log(picArr);
       //判断数组长度大于3,移除最后一张,将数组中的一个数据截取
       if (picArr.length > 3){
         $('.imgbox img').eq(-1).remove();
