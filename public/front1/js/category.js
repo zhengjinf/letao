@@ -25,7 +25,7 @@ $(function () {
     $(this).addClass('current').parent().siblings().find('a').removeClass('current');
     render(id);
   })
-
+  //专门用于根据一级分类id渲染二级分类
   function render(id) {
     $.ajax({
       type: 'get',
