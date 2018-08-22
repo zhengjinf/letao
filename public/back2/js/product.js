@@ -169,10 +169,10 @@ $(function(){
     e.preventDefault();
     //发送请求
     var str = $('#form').serialize();
-    str += "&picName1="+picArr[0].picName+"&picAddr1"+picArr[0].picAddr;
-    str += "&picName2="+picArr[1].picName+"&picAddr2"+picArr[1].picAddr;
-    str += "&picName3="+picArr[2].picName+"&picAddr3"+picArr[2].picAddr;
-    // console.log(str);
+    str += "&picName1="+picArr[0].picName+"&picAddr1="+picArr[0].picAddr;
+    str += "&picName2="+picArr[1].picName+"&picAddr2="+picArr[1].picAddr;
+    str += "&picName3="+picArr[2].picName+"&picAddr3="+picArr[2].picAddr;
+    console.log(str);
     $.ajax({
       type:'post',
       url:'/product/addProduct',

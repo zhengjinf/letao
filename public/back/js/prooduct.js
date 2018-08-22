@@ -91,8 +91,8 @@ $(function () {
     var txt = $(this).text();
     $('.dropD').text(txt);
     var id = $(this).data('id');
-    // console.log(id)
-    $('[name="brandId]').val(id);
+    console.log(id)
+    $('[name="brandId"]').val(id);
     //重置表单校验状态
     $('#form').data('bootstrapValidator').updateStatus('brandId','VALID')
   })
@@ -209,10 +209,10 @@ $(function () {
 
     // brandId=&statu=&proName=%E6%9E%9C%E6%9E%9C&proDesc=1111&num=111&size=11-11&oldPrice=11&price=11&picStatus=
     //拼接图片名称和地址
-    paramStr += "$picName1="+picArr[0].picName+"&picAddr1="+picArr[0].picAddr ;
-    paramStr += "$picName2="+picArr[1].picName+"&picAddr2="+picArr[1].picAddr ;
-    paramStr += "$picName3="+picArr[2].picName+"&picAddr3="+picArr[2].picAddr ;
-    // console.log(paramStr);
+    paramStr += "&picName1="+picArr[0].picName+"&picAddr1="+picArr[0].picAddr ;
+    paramStr += "&picName2="+picArr[1].picName+"&picAddr2="+picArr[1].picAddr ;
+    paramStr += "&picName3="+picArr[2].picName+"&picAddr3="+picArr[2].picAddr ;
+    console.log(paramStr);
     //发送请求
     $.ajax({
       type:'post',
