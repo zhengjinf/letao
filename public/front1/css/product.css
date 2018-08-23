@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* 公共样式 */
+.item-box{
+  border-top: 1px solid #ccc;
+  padding :10px;
+}
+/* 价格 */
+.lt-price .price{
+  color: red;
+}
+.lt-price .oldPrice{
+  text-decoration: line-through;
+  font-size: 12px;
+  color: #666;
+}
+/* 尺码 */
+.lt-size span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border:1px solid #ccc;
+  font-size: 12px;
+  margin: 3px 0;
+  /* color: #666; */
+}
+.lt-size span.current{
+  background-color: orange;
+}
+/* 数量 */
+.lt-num .surply{
+  font-size: 12px;
+  color: #666;
+}
+
+/* 购物车 */
+.lt-cart{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 55px;
+background-color: #EFEFF4;
+padding: 10px;
+border-top: 1px solid red;
+}
+.lt-cart a{
+padding:5px;
+
+}
