@@ -65,8 +65,8 @@ $(function () {
             $('.lt-product').html(htmlStr);
             //请求完成,结束下拉刷新
             mui(".mui-scroll-wrapper").pullRefresh().endPulldownToRefresh();
-            //开启上拉加载
-            mui(".mui-scroll-wrapper").pullRefresh().enablePullupToRefresh();
+            //重置上拉加载
+            mui(".mui-scroll-wrapper").pullRefresh().refresh(true)
           })
           //
         } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
@@ -78,6 +78,7 @@ $(function () {
           // 渲染下一页
           currentPage++;
           render(function (info) {
+            console.log(info)
             var htmlStr = template('productTpl', info);
             $('.lt-product').append(htmlStr);
             //请求完成,结束上拉加载true:没有更多数据

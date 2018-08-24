@@ -68,7 +68,7 @@
             </a>
           </li>
         </ul> -->
-        <div class="load"></div>
+        <!-- <div class="load"></div> -->
           </div>
 
 
@@ -113,7 +113,7 @@
     <ul class ="mui-clearfix">
       {{each data v i}}
         <li class="lt-item">
-          <a href="#">
+          <a href="product.html?productId={{v.id}}" data-id="{{v.id}}">
             <img src="{{v.pic[0].picAddr}}" alt="">
             <p class="mui-ellipsis-2">{{v.proName}}</p>
             <p><span class="price">¥{{v.price}}</span><span class="oldPrice">¥{{v.oldPrice}}</span></p>

@@ -1,0 +1,56 @@
+/* 购物车 */
+.lt-left{
+  width: 60px;
+  height: 90px;
+  float: left;
+}
+.lt-right{
+  height: 90px;
+  padding: 0 10px;
+  overflow: hidden;
+  /* background-color: pink; */
+}
+.mui-table-cell{
+  display: block;
+}
+.title{
+  font-size: 16px;
+  height: 36px;
+  overflow: hidden;
+  line-height: 18px
+}
+.price{
+  color:red;
+  font-size: 14px;
+  margin-right: 5px;;
+}
+.oldPrice{
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.lt-price .num{
+  color:#666;
+  font-size: 12px;
+}
+.lt-size{
+  color:#666;
+  font-size: 14px;
+}
+.elt-size span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 3px;;
+}
+.elt-size {
+  text-align: left;
+}
+.elt-size span.current{
+  background-color: orange;
+  color:#fff;
+}
+.elt-num{
+  text-align: left;
+}

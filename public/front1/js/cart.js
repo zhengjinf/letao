@@ -13,8 +13,7 @@ $(function () {
           //利用获取到的数据,进行页面渲染
           // {error: 400, message: "未登录！"}
           if (info.error === 400) {//拦截到登录页
-            location.href = "login.html";
-            return;
+            location.href = "login.html?returnUrl=" + location.href;
           }
           //有数据返回,利用数据进行页面渲染
           var htmlStr = template('productTpl', { arr: info });
